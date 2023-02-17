@@ -1,0 +1,14 @@
+creating a virtual environment
+$ python3 -m venv fastapi-env
+$ source fastapi-env/bin/activate
+$ pip3 install fastapi
+// above command is to install fastapi in our virtual environment, you may face to update pip run the command in the terminal, it will appear when you run the above command
+
+//  for production
+$ pip install "uvicorn[standard]"
+
+error occured ModuleNotFoundError: No module named 'fastapi'
+command + shift + p  in vs code then select the environment as python select interpreter > python <version> <folder> :env
+
+Run the server with:
+$ uvicorn main:app --reload
