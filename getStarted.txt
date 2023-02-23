@@ -41,3 +41,7 @@ find the ip address of your network
 $ uvicorn server:app --host 10.196.6.58 --port 8000
 we are running on host 10.196.6.58 and port 8000 let say
 then fetch data as http://10.196.6.58:8000/
+
+for deployment to render https://render.com/ you need requirements.txt
+generate using 
+$ pip freeze > requirements.txt
