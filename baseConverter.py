@@ -16,6 +16,15 @@ def main(number, base, convertTo):
     for j in range(len(numLi)+1, len(number)):
         decimalLi.append(number[j])
 
+    for k in range(len(decimalLi)):
+        if (base <= 10 and ord(decimalLi[k]) > 49 + base - 2):
+            isValid = False
+            print("shit happended")
+            break
+        if (base > 10 and ord(decimalLi[k]) > 55 + base - 1):
+            isValid = False
+            break
+
     def convertToDecimal():
         ans = 0
         p = 0
