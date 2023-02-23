@@ -2,13 +2,42 @@ creating a virtual environment
 $ python3 -m venv fastapi-env
 $ source fastapi-env/bin/activate
 $ pip3 install fastapi
-// above command is to install fastapi in our virtual environment, you may face to update pip run the command in the terminal, it will appear when you run the above command
+
+// above command is to install fastapi in our virtual environment, 
+you may face to update pip run the command in the terminal, it will appear when you run 
+the above command
 
 //  for production
 $ pip install "uvicorn[standard]"
 
-error occured ModuleNotFoundError: No module named 'fastapi'
-command + shift + p  in vs code then select the environment as python select interpreter > python <version> <folder> :env
+// for auto complete 
+$ pip install -U autopep8
+
+// http://127.0.0.1:8000/docs  --> will contain all the api's created by us
+// http://127.0.0.1:8000/redoc --> also give all the apis created by us
+
+// error occured ModuleNotFoundError: No module named 'fastapi'
+command + shift + p  in vs code then select the environment 
+as python select interpreter > python <version> <folder> :env
 
 Run the server with:
 $ uvicorn main:app --reload
+
+
+NOTE: uvicorn main:app --reload 
+main is same as server.js and app is the instance, 
+so define main.py(module) and app according to uvicorn main:app --reload
+
+function name can be same, only matters is the instance and decorators
+
+
+Problems of network with react native 
+run the server on specifi host and port 
+
+$ ifconfig 
+find the ip address of your network
+
+
+$ uvicorn server:app --host 10.196.6.58 --port 8000
+we are running on host 10.196.6.58 and port 8000 let say
+then fetch data as http://10.196.6.58:8000/
